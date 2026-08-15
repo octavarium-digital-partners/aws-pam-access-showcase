@@ -77,9 +77,10 @@ module "network" {
 module "ssm" {
   source = "../../modules/ssm"
 
-  name                     = local.name
-  deployment_role_arn      = var.deployment_role_arn
-  permissions_boundary_arn = var.permissions_boundary_arn
+  name                          = local.name
+  deployment_role_arn           = var.deployment_role_arn
+  permissions_boundary_arn      = var.permissions_boundary_arn
+  administrative_principal_arns = var.administrative_principal_arns
 }
 
 resource "aws_iam_role_policy_attachment" "cloudwatch_agent" {

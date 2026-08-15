@@ -72,6 +72,12 @@ variable "deployment_role_arn" {
   default     = ""
 }
 
+variable "administrative_principal_arns" {
+  description = "Explicit administrative principals allowed to administer protected workload resources."
+  type        = list(string)
+  default     = []
+}
+
 variable "permissions_boundary_arn" {
   description = "Bootstrap-created permissions boundary required on every workload IAM role."
   type        = string

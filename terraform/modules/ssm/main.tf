@@ -124,7 +124,7 @@ locals {
     var.deployment_role_arn,
     "${local.github_role_prefix}-plan",
     "${local.github_role_prefix}-destroy",
-  ], [for role in aws_iam_role.instance : role.arn])
+  ], [for role in aws_iam_role.instance : role.arn], var.administrative_principal_arns)
 }
 
 data "aws_iam_policy_document" "transfer_bucket" {

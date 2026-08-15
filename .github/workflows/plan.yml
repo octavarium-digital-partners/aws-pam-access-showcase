@@ -33,6 +33,7 @@ jobs:
       TF_VAR_expiration: ${{ vars.EXPIRATION }}
       TF_VAR_deployment_role_arn: ${{ vars.DEPLOY_ROLE_ARN }}
       TF_VAR_permissions_boundary_arn: ${{ vars.PERMISSIONS_BOUNDARY_ARN }}
+      TF_VAR_administrative_principal_arns: ${{ vars.ADMINISTRATIVE_PRINCIPAL_ARNS }}
       TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET }}
       TF_STATE_REGION: ${{ vars.AWS_REGION }}
       TF_STATE_KMS_KEY_ARN: ${{ vars.TF_STATE_KMS_KEY_ARN }}
